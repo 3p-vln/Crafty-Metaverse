@@ -234,6 +234,8 @@ button:hover {
 .home__content {
     padding: 18px 67px;
     position: relative;
+    background-image: url('img/Vector.svg');
+    background-repeat: repeat-y;
 }
 
 .home__content::before {
@@ -248,6 +250,9 @@ button:hover {
     top: 0;
 }
 
+
+
+/*АДАПТИВЫ*/
 @media (max-width: 1024px) {
     .burger {
         display: flex;
