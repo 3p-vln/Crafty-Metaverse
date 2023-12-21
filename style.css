@@ -428,6 +428,20 @@ button:hover {
     .about-us {
         background: none;
         padding-top: 0;
+        padding-bottom: 75px;
+        position: relative;
+    }
+
+    .about-us__bg {
+        position: absolute;
+        width: 389.499px;
+        height: 168.945px;
+        border-radius: 389.499px;
+        opacity: 0.5;
+        background: var(--1, linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%));
+        filter: blur(98.82728576660156px);
+        right: 0;
+        bottom: 0;
     }
 
     .about-us__img {
@@ -468,10 +482,10 @@ button:hover {
         letter-spacing: 1.15px;
         bottom: 10px;
     }
-}
 
-@media (max-width:600px) {
-
+    .about-us .swiper-pagination-total{
+        display: none;
+    }
 }
 
 

@@ -29,6 +29,7 @@ document.querySelector('.burger').addEventListener('click', function () {
 
 const swiperAbout = new Swiper('.about-us__swiper', {
     spaceBetween: 15,
+    grabCursor:true,
     pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
