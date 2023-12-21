@@ -223,7 +223,7 @@ button {
     line-height: 145%;
 }
 
-.home button{
+.home button {
     width: 209px;
 }
 
@@ -250,8 +250,106 @@ button:hover {
     top: 0;
 }
 
+.about-us {
+    background-image: url('img/about-us-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    padding: 245px 0 206px;
+    position: relative;
+    top: -7px;
+}
 
+.about-us__content {
+    position: relative;
+    max-width: 756px;
+    padding: 69px 60px 5px 69px;
+    background-image: url('img/Vector.svg');
+    background-repeat: repeat-y;
+}
 
+.about-us__content::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    border-radius: 62px;
+    background: #56FFEB;
+    box-shadow: 0px 4px 13px 0px rgba(191, 58, 255, 0.44);
+    left: 0;
+    top: 0;
+}
+
+.about-us .swiper-slide {
+    min-height: 485px;
+    height: 100%;
+}
+
+.about-us .slide__title {
+    font-family: 'HeliosExtC';
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 109%;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+
+.about-us .slide__info {
+    font-family: 'Plus Jakarta Display';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.about-us .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal  {
+    left: 26px;
+    top: 428px;
+    max-width: 406px;
+    height: 1px;
+    background-color: #FFF;
+}
+
+.about-us .swiper-scrollbar::before{
+    content: '';
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    background-image: url(img/point.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: -26px;
+    top: -14px;
+}
+
+.about-us .swiper-scrollbar-drag{
+    background-color: #7F5CFF;
+    height: 5px;
+    top: -2px;
+}
+
+.about-us .swiper-pagination-fraction {
+    display: flex;
+    justify-content: space-between;
+    max-width: 402px;
+    color: #FFF;
+    font-family: 'HeliosExtC';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 145%;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+.chaptaer-current{
+    display: none;
+}
+
+.chaptaer-current.active{
+    display: block;
+}
 /*АДАПТИВЫ*/
 @media (max-width: 1024px) {
     .burger {
@@ -320,7 +418,7 @@ button:hover {
         width: 188px;
     }
 
-    button{
+    button {
         font-size: 16px;
     }
 }

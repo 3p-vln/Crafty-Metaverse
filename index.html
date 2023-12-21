@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -20,9 +21,9 @@
                     <nav class="header__menu">
                         <ul class="menu__list">
                             <li class="menu__item"><a href="#home">Home</a></li>
-                            <li class="menu__item"><a href="">About Us</a></li>
-                            <li class="menu__item"><a href="">White paper</a></li>
-                            <li class="menu__item"><a href="">Tokenomics</a></li>
+                            <li class="menu__item"><a href="#about-us">About Us</a></li>
+                            <li class="menu__item"><a href="#white-paper">White paper</a></li>
+                            <li class="menu__item"><a href="#tokenomics">Tokenomics</a></li>
                             <li class="menu__item"><a href="">Road Map</a></li>
                             <li class="menu__item"><a href="">How to buy</a></li>
                             <li class="menu__item"><a href="">Buy</a></li>
@@ -39,22 +40,66 @@
                 <div class="container">
                     <div class="home__content">
                         <p class="home__subtitle subtitle">Crafty Metaverse</p>
-                        <h1 class="home__title">A SHARED, IMMERSIVE MULTI-BLOCKCHAIN BASED 
-                            <span><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
-                            <path d="M23 0L26.2527 19.7473L46 23L26.2527 26.2527L23 46L19.7473 26.2527L0 23L19.7473 19.7473L23 0Z" fill="white"/>
-                          </svg> </span>
-                          METAVERSE ECOSYSTEM</h1>
+                        <h1 class="home__title">A SHARED, IMMERSIVE MULTI-BLOCKCHAIN BASED
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"
+                                    fill="none">
+                                    <path
+                                        d="M23 0L26.2527 19.7473L46 23L26.2527 26.2527L23 46L19.7473 26.2527L0 23L19.7473 19.7473L23 0Z"
+                                        fill="white" />
+                                </svg> </span>
+                            METAVERSE ECOSYSTEM
+                        </h1>
                         <button>Invest Now</button>
                     </div>
                 </div>
             </section>
-            
+            <section class="about-us">
+                <div class="container">
+                    <div class="about-us__content">
+                        <p class="subtitle">Profile</p>
+                        <div class="swiper about-us__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide-first" data-slide="slide-1">
+                                    <h2 class="slide__title">About Us</h2>
+                                    <p class="slide__info">CYou are using the old write up. We are using this now.
+                                        Crafty Metaverse is a multi-blockchain based virtual reality metaverse platform
+                                        to develop the most immersive, imaginative, and addictive gaming experiences. We
+                                        are providing our gaming community with the near-real-world experience while
+                                        using their digital avatars. Our ecosystem will be a futuristic, decentralized,
+                                        and persistent 3D virtual metaverse gaming platform especially for crypto
+                                        enthusiasts, gamers, artists, and metaverse fans. .</p>
+                                </div>
+                                <div class="swiper-slide slede-second" data-slide="slide-2">
+                                    <h2 class="slide__title">White paper</h2>
+                                    <p class="slide__info">All Crypto Whitepapers is a decentralized blockchain
+                                        hyperledger protocol with subzero finality, peer to peer proof of work and
+                                        double spending hash rate. If you have no idea what this means, you’ve come to
+                                        the right place! Through our Articles, News and our list of Crypto definitions,
+                                        we give you all the knowledge you need to do your own crypto research. </p>
+                                </div>
+                                <div class="swiper-slide slide-third" data-slide="slide-3">
+                                    <h2 class="slide__title">Tokenomics</h2>
+                                    <p class="slide__info">Tokenomics is the understanding of the supply and demand
+                                        characteristics of a cryptocurrency. In traditional economics, economists track
+                                        currency output using official data on the money supply. The numbers they report
+                                        are usually called M1, M2, and in some countries also M3 or M4. These figures
+                                        help ensure transparency in monitoring various aspects of currency supply.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                            <div class="swiper-pagination"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <footer class="footer">
 
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 
