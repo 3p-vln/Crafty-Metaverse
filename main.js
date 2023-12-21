@@ -19,6 +19,12 @@ window.addEventListener('scroll', () => {
 document.querySelector('.burger').addEventListener('click', function () {
     this.classList.toggle('active');
     document.querySelector('.header__menu').classList.toggle('open');
+    document.querySelectorAll('.menu__item').forEach(item => {
+        item.addEventListener('click', function(){
+            document.querySelector('.burger').classList.remove('active');
+            document.querySelector('.header__menu').classList.remove('open');
+        })
+    })
 });
 
 const swiperAbout = new Swiper('.about-us__swiper', {
@@ -37,6 +43,7 @@ const swiperAbout = new Swiper('.about-us__swiper', {
     },
     scrollbar: {
         el: '.swiper-scrollbar',
+        draggable: true,
       },
 });
 

@@ -306,7 +306,7 @@ button:hover {
 
 .about-us .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal  {
     left: 26px;
-    top: 428px;
+    bottom: 55px;
     max-width: 406px;
     height: 1px;
     background-color: #FFF;
