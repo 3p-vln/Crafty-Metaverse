@@ -5,6 +5,7 @@ body {
 
 body {
     background-color: #090812;
+    color: #FFF;
 }
 
 @font-face {
@@ -286,7 +287,7 @@ button:hover {
     top: 0;
 }
 
-.about-us .slide__title {
+.title {
     font-family: 'HeliosExtC';
     font-size: 45px;
     font-weight: 700;
@@ -347,6 +348,214 @@ button:hover {
 
 .about-us__img {
     display: none;
+}
+
+.road-map {
+    padding-top: 215px;
+}
+
+.road-map__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+}
+
+.point {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    height: 135px;
+}
+
+.point.purple {
+    top: -8px;
+    left: 3px;
+}
+
+.point__center {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255);
+    opacity: 0.72;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.point__first {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 4;
+    animation: pulsing 0.7s infinite;
+}
+
+.purple .point__first {
+    background-color: #b700ff;
+}
+
+.pink .point__first {
+    background-color: #FC00FF;
+}
+
+.green .point__first {
+    background-color: #25ffd7;
+}
+
+.blue .point__first {
+    background-color: #00a6ff;
+}
+
+.point__second {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.4;
+    z-index: 3;
+    animation: pulsing 0.7s infinite;
+}
+
+.purple .point__second {
+    background-color: #3c03c3;
+}
+
+.pink .point__second {
+    background-color: #b743b7;
+}
+
+.green .point__second {
+    background-color: #38ffb9;
+}
+
+.blue .point__second {
+    background-color: #4596fe;
+}
+
+.point__third {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 4;
+    animation: pulsing 0.7s infinite;
+}
+
+.purple .point__third {
+    background-color: #6103a98e;
+}
+
+.pink .point__third {
+    background-color: #94048a8b;
+}
+
+.green .point__third {
+    background-color: #239e8378;
+}
+
+.blue .point__third {
+    background-color: #417ed365;
+}
+
+.road-map__points{
+    max-width: 1400px;
+    padding-top: 68px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.road-map__point {
+    display: flex;
+}
+
+.road-map__point.right{
+    margin-left: auto;
+}
+
+.road-map__point.first{
+    margin-left: 70px;
+}
+
+.road-map__point.second{
+    margin-top: 92px;
+    margin-right: 90px;
+}
+.point-text {
+    font-family: 'Plus Jakarta Display';
+}
+
+.point-text__list ul li {
+    padding-top: 19px;
+    padding-left: 37px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 119%;
+    opacity: 0.8;
+    position: relative;
+}
+
+.point-text__list ul li::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url('img/list.svg');
+    left: 0;
+    top: 15px;
+}
+
+.point-text__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 5px;
+}
+
+.point-text__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'HeliosExtC';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 145%;
+    margin-top: 21px;
+    gap: 10px;
+    padding-right: 89px;
+}
+
+.point-text__more.active svg{
+    transform: rotate(180deg);
+}
+
+.accordion__more{
+    display: none;
+    position: absolute;
+}
+
+.accordion__more.active{
+    display: block;
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(0.9, 0.9)
+    }
+
+    50% {
+        transform: scale(1.0, 1.0);
+    }
+
+    100% {
+        transform: scale(0.9, 0.9);
+    }
 }
 
 /*АДАПТИВЫ*/
@@ -458,7 +667,7 @@ button:hover {
         height: 100%;
     }
 
-    .about-us .slide__title {
+    .title {
         font-size: 28px;
         line-height: 109%;
         margin-bottom: 52px;
@@ -483,7 +692,7 @@ button:hover {
         bottom: 10px;
     }
 
-    .about-us .swiper-pagination-total{
+    .about-us .swiper-pagination-total {
         display: none;
     }
 }

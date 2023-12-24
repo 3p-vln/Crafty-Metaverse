@@ -20,7 +20,7 @@ document.querySelector('.burger').addEventListener('click', function () {
     this.classList.toggle('active');
     document.querySelector('.header__menu').classList.toggle('open');
     document.querySelectorAll('.menu__item').forEach(item => {
-        item.addEventListener('click', function(){
+        item.addEventListener('click', function () {
             document.querySelector('.burger').classList.remove('active');
             document.querySelector('.header__menu').classList.remove('open');
         })
@@ -29,7 +29,7 @@ document.querySelector('.burger').addEventListener('click', function () {
 
 const swiperAbout = new Swiper('.about-us__swiper', {
     spaceBetween: 15,
-    grabCursor:true,
+    grabCursor: true,
     pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
@@ -38,55 +38,32 @@ const swiperAbout = new Swiper('.about-us__swiper', {
         },
         renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' +
-                    ' '+
-                   '<span class="' + totalClass + '"></span>';
+                ' ' +
+                '<span class="' + totalClass + '"></span>';
         },
     },
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
-      },
+    },
 });
 
-// const chaptaer = document.querySelectorAll('.chaptaer-current');
-// const slide = document.querySelectorAll('.swiper-slide');
+const accordionMore = document.querySelectorAll('.point-text__more');
+const accordionMoreInfo = document.querySelectorAll('.accordion__more');
 
-// chaptaer.forEach(item => {
-//     const currentChaptaer = item;
-//     const currentSlideId = currentChaptaer.getAttribute('data-slide');
-//     const currentSlide = document.querySelector(currentSlideId);
-//     console.log(currentSlide);
-//     if (!currentChaptaer.classList.contains('active')) {
-//         chaptaer.forEach(function (item) {
-//             item.classList.remove('active');
-//         });
+accordionMore.forEach(item => {
+    item.addEventListener('click', () => {
+        const currentMore = item;
+        const moreInfoId = currentMore.getAttribute("data-more");
+        const currentMoreInfo = document.getElementById(moreInfoId);
 
-//         slide.forEach(function (item) {
-//             item.classList.remove('active');
-//         });
-
-//         currentChaptaer.classList.add('active');
-//         currentSlide.classList.add('active');
-//     }
-// })
-// // if (document.querySelector('.slide-first').classList.contains('swiper-slide-active')) {
-// //     console.log('1');
-// //     chaptaer.forEach(item => {
-// //         item.classList.remove('active');
-// //     })
-// //     chaptaer[0].classList.add('active');
-// // }
-// // else if (document.querySelector('.slede-second').classList.contains('swiper-slide-active')) {
-// //     console.log('2');
-// //     chaptaer.forEach(item => {
-// //         item.classList.remove('active');
-// //     })
-// //     chaptaer[1].classList.add('active');
-// // }
-// // else if (document.querySelector('.slede-third').classList.contains('swiper-slide-active')) {
-// //     console.log('3');
-// //     chaptaer.forEach(item => {
-// //         item.classList.remove('active');
-// //     })    
-// //     chaptaer[2].classList.add('active');
-// // }
+        if (!currentMore.classList.contains('active')) {
+            currentMore.classList.add('active');
+            currentMoreInfo.classList.add('active');
+        }
+        else {
+            currentMore.classList.remove('active');
+            currentMoreInfo.classList.remove('active');
+        }
+    })
+})
