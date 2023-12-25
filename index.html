@@ -24,7 +24,7 @@
                             <li class="menu__item"><a href="#about-us">About Us</a></li>
                             <li class="menu__item"><a href="#white-paper">White paper</a></li>
                             <li class="menu__item"><a href="#tokenomics">Tokenomics</a></li>
-                            <li class="menu__item"><a href="">Road Map</a></li>
+                            <li class="menu__item"><a href="#roadmap">Road Map</a></li>
                             <li class="menu__item"><a href="">How to buy</a></li>
                             <li class="menu__item"><a href="">Buy</a></li>
                         </ul>
@@ -89,9 +89,13 @@
                     </div>
                 </div>
             </section>
-            <section class="road-map">
+            <section class="road-map" id="roadmap">
+                <div class="road-map__bg blur">
+                    <div class="blur__left"></div>
+                    <div class="blur__right"></div>
+                </div>
                 <div class="container">
-                    <div class="road-map-content">
+                    <div class="road-map__content">
                         <div class="road-map__head">
                             <h3 class="road-map__subtitle subtitle">Our Way</h3>
                             <h2 class="road-map__title title">Roadmap</h2>
@@ -106,7 +110,7 @@
                                         <ul>
                                             <li>Launch Date: Jan 8th, 2022 Contract Audit</li>
                                             <li>TechAudit Completed on Jan 21st, 2022<br>5k Telegram members</li>
-                                            <li>32k Telegram Members.  CG and CMC listings</li>
+                                            <li>32k Telegram Members. CG and CMC listings</li>
                                             <li>Application Sent CEX Listings</li>
                                             <li>CoinsBit Listing – Feb 8th . Website Revamp</li>
                                             <li>Contracted UI/UX Developers</li>
@@ -114,14 +118,15 @@
                                     </div>
                                     <div class="point-text__more" data-more="more-1">
                                         <p class="more">More</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
-                                            <path d="M1 1L7.5 7L14 1" stroke="white" stroke-width="2"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9"
+                                            fill="none">
+                                            <path d="M1 1L7.5 7L14 1" stroke="white" stroke-width="2" />
+                                        </svg>
                                     </div>
                                     <div class="point-text__list accordion__more" id="more-1">
                                         <ul>
                                             <li>Launch Date: Jan 8th, 2022 Contract Audit</li>
-                                            <li>32k Telegram Members.  CG and CMC listings</li>
+                                            <li>32k Telegram Members. CG and CMC listings</li>
                                             <li>CoinsBit Listing – Feb 8th . Website Revamp</li>
                                         </ul>
                                     </div>
@@ -131,6 +136,7 @@
                                     <div class="point__first"></div>
                                     <div class="point__second"></div>
                                     <div class="point__third"></div>
+                                    <div class="point__blur"></div>
                                 </div>
                             </div>
                             <div class="road-map__point right second">
@@ -139,7 +145,8 @@
                                     <div class="point__first"></div>
                                     <div class="point__second"></div>
                                     <div class="point__third"></div>
-                                </div>  
+                                    <div class="point__blur"></div>
+                                </div>
                                 <div class="point-text">
                                     <div class="point-text__title">
                                         <h4>Q2 <br>CMETA Ecosystem Begins</h4>
@@ -149,40 +156,58 @@
                                             <li>CMETA Staking Release</li>
                                             <li>SANKOFA Sidechain DEV Starts ($KOFA)<br>
                                                 <span>·</span> CEX Listings and Marketing <br>
-                                                <span>·</span> Governance Token Launch on SOL ($CMETA)</li>
+                                                <span>·</span> Governance Token Launch on SOL ($CMETA)
+                                            </li>
                                             <li>Bridge BSC, ETH Smart Contracts to Solana Contract<br>
-                                                <span>·</span> Social Media Marketing Pushü</li>
+                                                <span>·</span> Social Media Marketing Pushü
+                                            </li>
                                             <li>10K Telegram Members</li>
                                             <li>10K Twitter Followers</li>
                                         </ul>
                                     </div>
                                     <div class="point-text__more" data-more="more-2">
                                         <p class="more">More</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
-                                            <path d="M1 1L7.5 7L14 1" stroke="white" stroke-width="2"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9"
+                                            fill="none">
+                                            <path d="M1 1L7.5 7L14 1" stroke="white" stroke-width="2" />
+                                        </svg>
                                     </div>
                                     <div class="point-text__list accordion__more" id="more-2">
                                         <ul>
                                             <li>CMETA Staking Release</li>
-                                            <li>SANKOFA Sidechain DEV Starts ($KOFA)<br>
-                                                <span>·</span> CEX Listings and Marketing <br>
-                                                <span>·</span> Governance Token Launch on SOL ($CMETA)</li>
-                                            <li>Bridge BSC, ETH Smart Contracts to Solana Contract<br>
-                                                <span>·</span> Social Media Marketing Pushü</li>
                                             <li>10K Telegram Members</li>
                                             <li>10K Twitter Followers</li>
                                         </ul>
                                     </div>
-                                </div>   
+                                </div>
                             </div>
                             <div class="road-map__point left third">
+                                <div class="point-text">
+                                    <div class="point-text__title">
+                                        <h4>Q3<br>
+                                            Guardians of Lost Worlds Released to Public (PC)</h4>
+                                    </div>
+                                    <div class="point-text__list">
+                                        <ul>
+                                            <li>Implement In-Game Staking ($KOFA Rewards)</li>
+                                            <li>In-Game NFT Released<br>
+                                                <span>·</span> SANKOFA Sidechain on Test Net
+                                            </li>
+                                            <li>Fiat On-Ramp Added<br>
+                                                <span>·</span> Gameplay Battle Mode Introduced<br>
+                                                <span>·</span> Marketplace Introduced<br>
+                                                <span>·</span> CEX Listings and Marketing
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="point green">
                                     <div class="point__center"></div>
                                     <div class="point__first"></div>
                                     <div class="point__second"></div>
                                     <div class="point__third"></div>
-                                </div>     
+                                    <div class="point__blur"></div>
+                                </div>
                             </div>
                             <div class="road-map__point right fourth">
                                 <div class="point blue">
@@ -190,7 +215,25 @@
                                     <div class="point__first"></div>
                                     <div class="point__second"></div>
                                     <div class="point__third"></div>
-                                </div>     
+                                    <div class="point__blur"></div>
+                                </div>
+                                <div class="point-text">
+                                    <div class="point-text__title">
+                                        <h4>Q4<br>SANKOFA Mainnet Launch</h4>
+                                    </div>
+                                    <div class="point-text__list">
+                                        <ul>
+                                            <li> Migrate Guardians of Lost Worlds to SANKOFA Sidechain <br>
+                                                <span>·</span> CEX Listings & Marketing<br>
+                                                <span>·</span> Virtual Arts Studio Introduced<br>
+                                                <span>·</span> Mobile Beta Gameplay Revealed<br>
+                                                <span>·</span> CMETA DEX Introduced: FORGE</li>
+                                            <li>Multi-Network Implementation<br>
+                                                <span>·</span> VR Game Dev Begins
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -30,6 +30,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .main {
@@ -352,7 +353,48 @@ button:hover {
 
 .road-map {
     padding-top: 215px;
+    padding-bottom: 225px;
+    position: relative;
 }
+
+.road-map__content {
+    position: relative;
+    z-index: 2;
+}
+
+.road-map__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.road-map__bg .blur__left {
+    width: 1088.878px;
+    height: 839.243px;
+    border-radius: 1088.878px;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(0, 219, 222, 0.30) 0%, rgba(252, 0, 255, 0.30) 100%);
+    filter: blur(218px);
+    position: absolute;
+    left: -500px;
+}
+
+.road-map__bg .blur__right {
+    width: 1088.878px;
+    height: 839.243px;
+    border-radius: 1088.878px;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(0, 219, 222, 0.30) 0%, rgba(252, 0, 255, 0.30) 100%);
+    filter: blur(218px);
+    position: absolute;
+    right: -129px;
+    top: 845px;
+
+}
+
 
 .road-map__head {
     display: flex;
@@ -373,6 +415,21 @@ button:hover {
 .point.purple {
     top: -8px;
     left: 3px;
+}
+
+.point.pink {
+    right: 35px;
+    bottom: 32px;
+}
+
+.point.green {
+    bottom: 18px;
+    right: 2px;
+}
+
+.point.blue {
+    right: 34px;
+    bottom: 9px;
 }
 
 .point__center {
@@ -443,7 +500,7 @@ button:hover {
     height: 130px;
     border-radius: 50%;
     opacity: 0.3;
-    z-index: 4;
+    z-index: 2;
     animation: pulsing 0.7s infinite;
 }
 
@@ -463,32 +520,95 @@ button:hover {
     background-color: #417ed365;
 }
 
-.road-map__points{
+.purple .point__blur {
+    width: 158.182px;
+    height: 166.342px;
+    transform: rotate(149.636deg);
+    background-color: #C344FF;
+    mix-blend-mode: hard-light;
+    filter: blur(113.82996368408203px);
+    position: relative;
+    z-index: 1;
+}
+
+.pink .point__blur {
+    width: 204.76px;
+    height: 215.322px;
+    transform: rotate(149.636deg);
+    background-color: rgba(255, 68, 236, 0.40);
+    mix-blend-mode: hard-light;
+    filter: blur(113.82996368408203px);
+    position: relative;
+    z-index: 1;
+}
+
+.green .point__blur {
+    width: 217.485px;
+    height: 228.704px;
+    transform: rotate(149.636deg);
+    background-color: rgba(68, 255, 199, 0.40);
+    mix-blend-mode: hard-light;
+    filter: blur(113.82996368408203px);
+    position: relative;
+    z-index: 1;
+}
+
+.blue .point__blur {
+    width: 217.485px;
+    height: 228.704px;
+    transform: rotate(149.636deg);
+    background-color: rgba(68, 255, 244, 0.40);
+    mix-blend-mode: hard-light;
+    filter: blur(113.82996368408203px);
+    position: relative;
+    z-index: 1;
+}
+
+.road-map__points {
     max-width: 1400px;
     padding-top: 68px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    background-image: url('img/rodmap-bg.svg');
+    background-repeat: no-repeat;
+    background-position: 44% 39%;
 }
 
 .road-map__point {
     display: flex;
 }
 
-.road-map__point.right{
+.road-map__point.right {
     margin-left: auto;
 }
 
-.road-map__point.first{
+.road-map__point.first {
     margin-left: 70px;
 }
 
-.road-map__point.second{
+.road-map__point.second {
     margin-top: 92px;
-    margin-right: 90px;
+    margin-right: 67px;
 }
+
+.road-map__point.third {
+    margin-left: 45px;
+    margin-top: 32px;
+}
+
+.road-map__point.fourth {
+    margin-top: 225px;
+    position: relative;
+    right: -52px;
+}
+
 .point-text {
     font-family: 'Plus Jakarta Display';
+}
+
+.second .point-text {
+    max-width: 440px;
 }
 
 .point-text__list ul li {
@@ -496,7 +616,7 @@ button:hover {
     padding-left: 37px;
     font-size: 18px;
     font-weight: 400;
-    line-height: 119%;
+    line-height: 124%;
     opacity: 0.8;
     position: relative;
 }
@@ -511,11 +631,19 @@ button:hover {
     top: 15px;
 }
 
+.point-text__list ul li span {
+    line-height: 28px;
+    padding-right: 20px;
+}
+
 .point-text__title {
     font-size: 22px;
     font-weight: 700;
     line-height: 140%;
-    margin-bottom: 5px;
+}
+
+.third .point-text__title {
+    max-width: 380px;
 }
 
 .point-text__more {
@@ -529,18 +657,20 @@ button:hover {
     margin-top: 21px;
     gap: 10px;
     padding-right: 89px;
+    position: relative;
+    z-index: 10;
 }
 
-.point-text__more.active svg{
+.point-text__more.active svg {
     transform: rotate(180deg);
 }
 
-.accordion__more{
+.accordion__more {
     display: none;
     position: absolute;
 }
 
-.accordion__more.active{
+.accordion__more.active {
     display: block;
 }
 
@@ -559,6 +689,28 @@ button:hover {
 }
 
 /*АДАПТИВЫ*/
+@media (max-width:1500px) {
+    .road-map__point.fourth {
+        right: 0;
+    }
+}
+
+@media (max-width:1200px) {
+    .accordion__more {
+        position: unset;
+    }
+
+    .road-map__point.first,
+    .road-map__point.third {
+        margin-left: 0;
+    }
+
+    .road-map__point.second,
+    .road-map__point.fourth {
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 1024px) {
     .burger {
         display: flex;
@@ -649,7 +801,7 @@ button:hover {
         opacity: 0.5;
         background: var(--1, linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%));
         filter: blur(98.82728576660156px);
-        right: 0;
+        right: -100px;
         bottom: 0;
     }
 
@@ -694,6 +846,162 @@ button:hover {
 
     .about-us .swiper-pagination-total {
         display: none;
+    }
+
+    .point__center {
+        width: 35px;
+        height: 35px;
+    }
+
+    .point__first {
+        width: 60px;
+        height: 60px;
+    }
+
+    .point__second {
+        width: 85px;
+        height: 85px;
+    }
+
+    .point__third {
+        width: 115px;
+        height: 115px;
+    }
+
+    .point {
+        width: 115px;
+        height: 72px;
+    }
+
+    .purple .point__blur {
+        width: 110.034px;
+        height: 115.71px;
+        transform: rotate(149.636deg);
+        filter: blur(79.18204498291016px);
+    }
+
+    .pink .point__blur {
+        width: 142.187px;
+        height: 149.522px;
+        transform: rotate(149.636deg);
+        filter: blur(79.04466247558594px);
+    }
+
+    .green .point__blur {
+        width: 146.474px;
+        height: 154.03px;
+        transform: rotate(149.636deg);
+        filter: blur(76.6633071899414px);
+    }
+
+    .blue .point__blur {
+        width: 157.192px;
+        height: 165.3px;
+        transform: rotate(149.636deg);
+        filter: blur(82.27281188964844px);
+    }
+
+    .point.purple {
+        top: 8px;
+        left: 59%;
+    }
+
+    .point.pink {
+        right: -33px;
+        bottom: 28px;
+    }
+
+    .point.green {
+        bottom: 27px;
+        left: 58%;
+    }
+
+    .point.blue {
+        right: -10px;
+        bottom: 49px;
+    }
+
+    .road-map {
+        padding-top: 85px;
+        padding-bottom: 153px;
+    }
+
+    .road-map__head {
+        margin-left: 0;
+    }
+
+    .road-map__points {
+        padding-top: 0;
+    }
+
+    .road-map__bg {
+        display: none;
+    }
+
+    .road-map__points {
+        background-image: none;
+    }
+
+    .road-map__point.first,
+    .road-map__point.third {
+        flex-direction: column-reverse;
+    }
+
+    .road-map__point.second,
+    .road-map__point.fourth {
+        flex-direction: column;
+    }
+
+    .road-map__point.second {
+        margin-top: 74px;
+    }
+
+    .road-map__point.third {
+        margin-left: 7px;
+        margin-top: 32px;
+    }
+
+    .road-map__point.fourth {
+        margin-top: 102px;
+        margin-left: 7px;
+    }
+
+    .point-text__more {
+        justify-content: flex-start;
+    }
+
+    .road-map__point.road-map__point.right {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .point-text {
+        padding-left: 4px;
+        padding-top: 2px;
+    }
+
+    .point-text__title {
+        font-size: 20px;
+        line-height: 140%;
+    }
+
+    .third .point-text__title {
+        max-width: 320px;
+    }
+
+    .point-text__list ul li {
+        font-size: 15px;
+        line-height: 140%;
+        padding-top: 18px;
+    }
+
+    .point-text__list ul li span {
+        line-height: 0;
+    }
+
+    .point-text__more {
+        font-size: 17px;
+        margin-top: 20px;
     }
 }
 
