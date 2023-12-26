@@ -10,20 +10,22 @@ body {
 
 @font-face {
     font-family: 'Plus Jakarta Display';
-    font-display: swap;
     src: url('fonts/PlusJakartaSans-Regular.woff2') format("woff2");
 }
 
 @font-face {
     font-family: 'HeliosExtC';
-    font-display: swap;
     src: url('fonts/HeliosExtC-Bold.woff2') format("woff2");
 }
 
 @font-face {
     font-family: 'HeliosBlackC';
-    font-display: swap;
     src: url('fonts/HeliosBlackC.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Regular.woff2') format("woff2");
 }
 
 .wrapper {
@@ -693,6 +695,17 @@ button:hover {
     background: linear-gradient(180deg, rgba(36, 10, 92, 0.63) 8.97%, rgba(36, 11, 88, 0.30) 100%);
     backdrop-filter: blur(150px);
     padding-top: 115px;
+    padding-bottom: 130px;
+}
+
+.our-brands__lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/Vector-2.svg');
+    background-repeat: repeat-y;
 }
 
 .our-brands__head {
@@ -707,18 +720,70 @@ button:hover {
     justify-content: center;
     padding-top: 65px;
     gap: 105px;
+    position: relative;
+    z-index: 5;
 }
 
 .card {
+    position: relative;
+}
+
+.card__content {
     max-width: 385px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.first .card__blur {
+    position: absolute;
+    width: 385px;
+    height: 350px;
+    background-color: #06D6DF;
+    mix-blend-mode: hard-light;
+    filter: blur(113.82996368408203px);
+    top: 104px;
+    opacity: 0.5;
+}
+
+.second .card__blur {
+    position: absolute;
+    width: 385px;
+    height: 350px;
+    background-color: #7B71EE;
+    mix-blend-mode: hard-light;
+    filter: blur(113.82996368408203px);
+    top: 161px;
+    opacity: 0.5;
+}
+
+.third .card__blur {
+    position: absolute;
+    width: 385px;
+    height: 350px;
+    background-color: #F00AFE;
+    mix-blend-mode: hard-light;
+    filter: blur(113.82996368408203px);
+    top: 104px;
+    opacity: 0.5;
 }
 
 .card__img {
     height: 401px;
     margin-bottom: 65px;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__img svg {
+    position: absolute;
+    top: -7px;
+    right: 153px;
 }
 
 .card__info {
@@ -748,15 +813,15 @@ button:hover {
     left: 0;
 }
 
-.card__info.first::before {
+.first .card__info::before {
     background: #06D6DF;
 }
 
-.card__info.second::before {
+.second .card__info::before {
     background: #7B71EE;
 }
 
-.card__info.third::before {
+.third .card__info::before {
     background: #F00AFE;
 }
 
@@ -774,17 +839,181 @@ button:hover {
 .card__about {
     text-align: center;
     font-family: 'Plus Jakarta Display';
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
-    line-height: 160%;
+    line-height: 170%;
     letter-spacing: 0.18px;
     opacity: 0.6;
+}
+
+.our-resources {
+    padding-top: 95px;
+}
+
+.our-resources__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 120px;
+}
+
+.our-resources__info {
+    display: flex;
+}
+
+.info {
+    text-align: center;
+    font-family: 'Gilroy';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 68px 168px 45px 130px;
+    max-width: 835px;
+    position: relative;
+    background-image: url('img/Vector-2.svg');
+    background-repeat: repeat-y;
+
+}
+
+.info::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 6px;
+    border-radius: 41px;
+    background: #BF3AFF;
+    box-shadow: 0px 0px 17px 0px rgba(191, 58, 255, 0.40);
+}
+
+.info::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 633px;
+    border-radius: 1px;
+    background: linear-gradient(269deg, rgba(58, 78, 255, 0.00) -0.39%, rgba(216, 58, 255, 0.10) 102.63%);
+}
+
+.info__title {
+    font-family: 'HeliosExtC';
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.info__btn {
+    margin-left: 165px;
+    margin-top: 70px;
+    max-width: 253px;
+    width: 100%;
+}
+
+.points-resources {
+    background-image: url('img/our-resources.png');
+    max-width: 735px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.point-resources__point{
+    position: relative;
+    width: 51px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.point-resources__point_center{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.purple .point-resources__point_center{
+    background-color: #9D71FF;
+}
+
+.pink .point-resources__point_center{
+    background-color: #FF4DE3;
+}
+
+.red .point-resources__point_center{
+    background-color: #FF388C;
+}
+
+.green .point-resources__point_center{
+    background-color: #56FFEB;
+}
+
+.point-resources__point_second{
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.purple .point-resources__point_second{
+    border-color: #9D71FF;
+}
+
+.pink .point-resources__point_second{
+    border-color: #FF4DE3;
+}
+
+.red .point-resources__point_second{
+    border-color: #FF388C;
+}
+
+.green .point-resources__point_second{
+    border-color: #56FFEB;
+}
+
+.point-resources__point_last{
+    position: absolute;
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    border: 1px solid #FF4DE3;
+}
+
+.purple .point-resources__point_last{
+    border-color: #9D71FF;
+}
+
+.pink .point-resources__point_last{
+    border-color: #FF4DE3;
+}
+
+.red .point-resources__point_last{
+    border-color: #FF388C;
+}
+
+.green .point-resources__point_last{
+    border-color: #56FFEB;
 }
 
 /*АДАПТИВЫ*/
 @media (max-width:1500px) {
     .road-map__point.fourth {
         right: 0;
+    }
+}
+
+@media (max-width:1440px) {
+    .our-brands__cards {
+        flex-wrap: wrap;
     }
 }
 
@@ -841,6 +1070,32 @@ button:hover {
     .home {
         padding-top: 212px;
         padding-bottom: 237px;
+    }
+
+    .card__img svg {
+        display: none;
+    }
+
+    .our-brands {
+        padding-top: 71px;
+        padding-bottom: 40px;
+    }
+
+    .our-brands__cards {
+        padding-top: 20px;
+        gap: 54px;
+    }
+
+    .card__content {
+        max-width: 350px;
+    }
+
+    .card__img {
+        margin-bottom: 58px;
+    }
+
+    .card__info {
+        padding-top: 42px;
     }
 }
 
