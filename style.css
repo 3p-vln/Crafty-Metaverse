@@ -939,7 +939,8 @@ button:hover {
     }
 
     .road-map__points {
-        background-image: none;
+        background-image: url('img/rodmap-bg-adapt.svg');
+        background-position: 53% 34px;
     }
 
     .road-map__point.first,
