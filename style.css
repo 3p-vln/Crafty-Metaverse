@@ -312,7 +312,7 @@ button:hover {
 .swiper-scrollbar.swiper-scrollbar-horizontal {
     left: 26px;
     bottom: 55px;
-    max-width: 406px;
+    max-width: 400px;
     height: 1px;
     background-color: #FFF;
 }
@@ -891,6 +891,11 @@ button:hover {
     background-image: url('img/Vector-2.svg');
     background-repeat: repeat-y;
 
+}
+
+.info__content{
+    position: relative;
+    z-index: 5;
 }
 
 .info::before {
