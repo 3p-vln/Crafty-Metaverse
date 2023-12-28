@@ -222,7 +222,6 @@ button {
     gap: 10px;
     flex-shrink: 0;
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.56);
     background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
     color: #FFF;
     font-family: 'HeliosBlackC';
@@ -236,7 +235,7 @@ button {
 }
 
 button:hover {
-    background: none;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
 
 .home__content {
