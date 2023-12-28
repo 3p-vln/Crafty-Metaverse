@@ -172,7 +172,7 @@ body {
 
 .home {
     width: 100%;
-    background-image: url('img/home-bg.jpg');
+    background-image: url(img/home-bg.webp), url(img/home-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -241,7 +241,7 @@ button:hover {
 .home__content {
     padding: 18px 67px;
     position: relative;
-    background-image: url('img/Vector.svg');
+    background-image: url(img/Vector.svg);
     background-repeat: repeat-y;
 }
 
@@ -258,7 +258,7 @@ button:hover {
 }
 
 .about-us {
-    background-image: url('img/about-us-bg.webp'), url('img/about-us-bg.jpg');
+    background-image: url(img/about-us-bg.webp), url(img/about-us-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -273,7 +273,7 @@ button:hover {
     position: relative;
     max-width: 756px;
     padding: 69px 60px 5px 69px;
-    background-image: url('img/Vector.svg');
+    background-image: url(img/Vector.svg);
     background-repeat: repeat-y;
 }
 
@@ -321,7 +321,7 @@ button:hover {
     position: absolute;
     width: 31px;
     height: 31px;
-    background-image: url('img/point.svg');
+    background-image: url(img/point.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -572,7 +572,7 @@ button:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background-image: url('img/rodmap-bg.svg');
+    background-image: url(img/rodmap-bg.svg);
     background-repeat: no-repeat;
     background-position: 44% 39%;
 }
@@ -628,7 +628,7 @@ button:hover {
     position: absolute;
     width: 24px;
     height: 24px;
-    background-image: url('img/list.svg');
+    background-image: url(img/list.svg);
     left: 0;
     top: 15px;
 }
@@ -703,7 +703,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/Vector-2.svg');
+    background-image: url(img/Vector-2.svg);
     background-repeat: repeat-y;
 }
 
@@ -887,7 +887,7 @@ button:hover {
     padding: 68px 168px 45px 130px;
     max-width: 835px;
     position: relative;
-    background-image: url('img/Vector-2.svg');
+    background-image: url(img/Vector-2.svg);
     background-repeat: repeat-y;
 
 }
@@ -941,7 +941,7 @@ button:hover {
 }
 
 .points-resources {
-    background-image: url('img/our-resources.webp'),url('img/our-resources.png');
+    background-image: url(img/our-resources.webp),url(img/our-resources.png);
     min-width: 735px;
     max-width: 735px;
     width: 100%;
@@ -1183,7 +1183,7 @@ button:hover {
         z-index: 50;
         overflow-y: auto;
         padding: 140px 20px 20px;
-        background-image: url('img/home-bg.webp'), url('img/home-bg.jpg');
+        background-image: url(img/home-bg.webp), url(img/home-bg.jpg);
         background-position: left;
         background-size: cover;
         animation: burgerAnimation 0.4s;
@@ -1441,7 +1441,7 @@ button:hover {
     }
 
     .road-map__points {
-        background-image: url('img/rodmap-bg-adapt.svg');
+        background-image: url(img/rodmap-bg-adapt.svg);
         background-position: 53% 34px;
     }
 
@@ -1552,7 +1552,7 @@ button:hover {
     }
 
     .points-resources {
-        background-image: url('img/our-resources-adapt.webp'),url('img/our-resources-adapt.png');
+        background-image: url(img/our-resources-adapt.webp),url(img/our-resources-adapt.png);
         background-size: contain;
         font-size: 12px;
         min-width: 371px;
