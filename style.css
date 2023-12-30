@@ -633,7 +633,7 @@ button:hover {
     top: 15px;
 }
 
-.point-text__list ul li ul li{
+.point-text__list ul li ul li {
     padding-left: 28px;
     padding-top: 7px;
 }
@@ -902,7 +902,7 @@ button:hover {
 
 }
 
-.info__content{
+.info__content {
     position: relative;
     z-index: 5;
 }
@@ -951,7 +951,7 @@ button:hover {
 }
 
 .points-resources {
-    background-image: url(img/our-resources.webp),url(img/our-resources.png);
+    background-image: url(img/our-resources.webp), url(img/our-resources.png);
     min-width: 735px;
     max-width: 735px;
     width: 100%;
@@ -1130,6 +1130,91 @@ button:hover {
     position: absolute;
     bottom: 47px;
     left: 283px;
+}
+
+.tickers {
+    margin-top: 57px;
+    margin-bottom: 200px;
+}
+
+.tickers__first {
+    position: relative;
+    left: -60px;
+    width: 110%;
+    height: 289px;
+    overflow: hidden;
+    font-family: 'HeliosExtC';
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 2px;
+    transform: rotate(-9.094deg);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(100px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.tickers__first_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.tickers__first_bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(10deg);
+}
+
+.tickers__first .tickers__content {
+    display: flex;
+}
+
+.tickers__first .tickers__content p {
+    white-space: nowrap;
+    padding: 0 70px;
+    animation: tickers 10s linear infinite;
+}
+
+.tickers__second {
+    position: relative;
+    left: -20px;
+    width: 110%;
+    height: 110px;
+    overflow: hidden;
+    transform: rotate(-9.094deg);
+    font-family: 'HeliosExtC';
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.72px;
+    background: #000;
+}
+
+.tickers__second .tickers__content {
+    display: flex;
+}
+
+.tickers__second .tickers__content p {
+    white-space: nowrap;
+    background: var(--2, linear-gradient(90deg, #21FCFF 0%, #FD40FF 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 10px;
+    animation: tickers 2s linear infinite;
+}
+
+@keyframes tickers {
+    0% {
+        transform: translateZ(0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
 /*АДАПТИВЫ*/
@@ -1562,7 +1647,7 @@ button:hover {
     }
 
     .points-resources {
-        background-image: url(img/our-resources-adapt.webp),url(img/our-resources-adapt.png);
+        background-image: url(img/our-resources-adapt.webp), url(img/our-resources-adapt.png);
         background-size: contain;
         font-size: 12px;
         min-width: 371px;
