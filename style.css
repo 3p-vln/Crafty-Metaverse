@@ -354,7 +354,7 @@ button:hover {
 
 .road-map {
     padding-top: 215px;
-    padding-bottom: 225px;
+    padding-bottom: 219px;
     position: relative;
 }
 
@@ -600,7 +600,7 @@ button:hover {
 }
 
 .road-map__point.fourth {
-    margin-top: 225px;
+    margin-top: 219px;
     position: relative;
     right: -52px;
 }
@@ -633,10 +633,20 @@ button:hover {
     top: 15px;
 }
 
-.point-text__list ul li span {
-    line-height: 28px;
-    padding-right: 20px;
+.point-text__list ul li ul li{
+    padding-left: 28px;
+    padding-top: 7px;
 }
+
+.point-text__list ul li ul li::before {
+    content: '·';
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    background-image: none;
+}
+
+
 
 .point-text__title {
     font-size: 22px;
@@ -1625,6 +1635,11 @@ button:hover {
     .point-resources.green {
         top: 326px;
         left: 7px;
+    }
+
+    .points-resources__blur {
+        left: 0;
+        top: 0;
     }
 }
 
