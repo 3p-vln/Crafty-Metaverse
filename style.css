@@ -1134,7 +1134,8 @@ button:hover {
 
 .tickers {
     margin-top: 57px;
-    margin-bottom: 200px;
+    position: relative;
+    z-index: 3;
 }
 
 .tickers__first {
@@ -1192,6 +1193,7 @@ button:hover {
     line-height: 140%;
     letter-spacing: 0.72px;
     background: #000;
+    margin-top: 22px;
 }
 
 .tickers__second .tickers__content {
@@ -1212,9 +1214,126 @@ button:hover {
     0% {
         transform: translateZ(0);
     }
+
     100% {
         transform: translate3d(-100%, 0, 0);
     }
+}
+
+.game {
+    width: 100%;
+    background-image: url(img/game-bg.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -173px;
+    padding-top: 327px;
+    padding-bottom: 100px;
+}
+
+.game__logo {
+    position: absolute;
+    right: 95px;
+    bottom: 50px;
+    z-index: 10;
+}
+
+.game__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game__star {
+    position: absolute;
+    z-index: 5;
+    right: -21px;
+    top: 76px;
+}
+
+.game__info_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.game__info {
+    position: relative;
+    left: 63px;
+    max-width: 644px;
+    padding-top: 59px;
+    padding-left: 39px;
+    padding-right: 40px;
+}
+
+.game__info_bg {
+    width: 100%;
+    background-image: url(img/line-down.svg);
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.game__info::after {
+    content: '';
+    width: 100%;
+    height: 554px;
+    background: linear-gradient(0deg, rgba(58, 78, 255, 0.00) 0%, rgba(156, 58, 255, 0.14) 100%);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.game__info::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 62px;
+    background: #56FFEB;
+    box-shadow: 0px 4px 13px 0px rgba(191, 58, 255, 0.44);
+    z-index: 5;
+}
+
+.game__title {
+    margin-bottom: 0;
+}
+
+.game__text {
+    text-align: center;
+    font-family: 'Plus Jakarta Display';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.3px;
+    opacity: 0.7;
+    margin-top: 27px;
+    margin-bottom: 45px;
+}
+
+.game__btn {
+    min-width: 175px;
+    font-size: 18px;
+}
+
+.game__img_one {
+    position: relative;
+    top: 44px;
+    left: 22px;
+}
+
+.game__img_two {
+    position: relative;
+    right: 10px;
 }
 
 /*АДАПТИВЫ*/
@@ -1241,6 +1360,41 @@ button:hover {
     .points-resources {
         left: 50px;
         min-height: 636px;
+    }
+
+    .game {
+        background-position: left;
+        padding-bottom: 300px;
+    }
+
+    .game__content {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .game__img_one {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        z-index: 5;
+    }
+
+    .game__img_two {
+        right: 133px;
+        bottom: -227px;
+    }
+
+    .game__info_bg {
+        height: 153%;
+    }
+
+    .game__info {
+        left: 0;
+    }
+
+    .game__logo {
+        bottom: 25px;
     }
 }
 
@@ -1328,7 +1482,7 @@ button:hover {
 
     .our-resources {
         padding-top: 80px;
-        padding-bottom: 80px;
+        padding-bottom: 74px;
     }
 
     .info {
@@ -1345,6 +1499,40 @@ button:hover {
         min-width: 386px;
         max-width: 590px;
         left: 7px;
+    }
+
+    .tickers {
+        margin-top: 0;
+    }
+
+    .tickers__first {
+        left: -20px;
+        height: 76px;
+        font-size: 52.391px;
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: 0.5px;
+    }
+
+    .tickers__first .tickers__content p {
+        padding: 0 25px;
+        animation: tickers 5s linear infinite;
+    }
+
+    .tickers__second {
+        height: 25px;
+        margin-top: 7px;
+        font-size: 18.861px;
+        line-height: 140%;
+    }
+
+    .tickers__second .tickers__content p {
+        padding: 0 5px;
+    }
+
+    .tickers__second .tickers__content p svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -1593,8 +1781,8 @@ button:hover {
         padding-top: 18px;
     }
 
-    .point-text__list ul li span {
-        line-height: 0;
+    .point-text__list ul li ul li {
+        padding-top: 0;
     }
 
     .point-text__more {
@@ -1725,6 +1913,85 @@ button:hover {
     .points-resources__blur {
         left: 0;
         top: 0;
+    }
+
+    .game {
+        top: -41px;
+        padding-top: 155px;
+    }
+
+    .game__info {
+        padding-top: 28px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .game__info::after {
+        height: 604px;
+    }
+
+    .game__star {
+        display: none;
+    }
+
+    .game__title {
+        margin-bottom: 0;
+    }
+
+    .game__text {
+        font-size: 16px;
+        line-height: 160%;
+        margin-top: 17px;
+        margin-bottom: 33px;
+    }
+
+    .game__info_bg {
+        height: 185%;
+    }
+
+    .game__img_one {
+        max-width: 300px;
+        top: 50%;
+        left: 42%;
+    }
+
+    .game__img_two {
+        width: 350px;
+        right: 95px;
+        bottom: -171px;
+    }
+
+    .game__logo {
+        width: 177px;
+        right: 40px;
+    }
+
+    .game__img_one img,
+    .game__img_two img,
+    .game__logo img {
+        width: 100%;
+    }
+}
+
+@media (max-width:425px) {
+    .game{
+        padding-bottom: 260px;
+    }
+    .game__img_one {
+        width: 213px;
+        top: 60%;
+        left: 44%;
+    }
+
+    .game__img_two {
+        width: 292px;
+        right: 81px;
+        bottom: -124px;
+    }
+
+    .game__logo{
+        right: 0;
+        bottom: 45px;
     }
 }
 
