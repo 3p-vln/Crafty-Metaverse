@@ -1355,10 +1355,12 @@ button:hover {
     left: 90px;
     top: 347px;
 }
-.explore-and-virtual__content{
+
+.explore-and-virtual__content {
     position: relative;
     z-index: 5;
 }
+
 .explore {
     display: flex;
     max-height: 803px;
@@ -1373,6 +1375,7 @@ button:hover {
 .explore__content {
     max-height: 452px;
     background-image: url(img/Vector.svg);
+    background-repeat: repeat-y;
     width: 100%;
     padding-left: 97px;
     padding-right: 81px;
@@ -1566,6 +1569,47 @@ button:hover {
     .game__logo {
         bottom: 25px;
     }
+
+    .explore {
+        flex-direction: column;
+    }
+
+    .explore__img {
+        top: -120px;
+        margin-left: auto;
+        margin-right: 25px;
+    }
+
+    .explore__info {
+        max-width: 570px;
+    }
+
+    .virtual__img {
+        position: relative;
+        bottom: -162px;
+    }
+
+    .virtual {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .virtual__blur {
+        margin-left: 0;
+        top: 765px;
+        max-height: 361px;
+        max-width: 100%;
+    }
+
+    .virtual__content {
+        margin-top: 153px;
+        margin-left: 0;
+        background-repeat: repeat-y;
+    }
+
+    .explore-and-virtual {
+        padding-top: 0;
+    }
 }
 
 @media (max-width:1200px) {
@@ -1590,7 +1634,6 @@ button:hover {
     }
 
     .header__menu {
-        display: none;
         flex-direction: column;
         position: fixed;
         height: 100vh;
@@ -1605,11 +1648,14 @@ button:hover {
         background-image: url(img/home-bg.webp), url(img/home-bg.jpg);
         background-position: left;
         background-size: cover;
-        animation: burgerAnimation 0.4s;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s;
     }
 
     .header__menu.open {
-        display: flex;
+        opacity: 1;
+        visibility: inherit;
     }
 
     .menu__list {
@@ -2174,5 +2220,15 @@ button:hover {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes burgerAnimationClose {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
