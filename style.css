@@ -2211,24 +2211,3 @@ button:hover {
         bottom: 45px;
     }
 }
-
-
-@keyframes burgerAnimation {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes burgerAnimationClose {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
