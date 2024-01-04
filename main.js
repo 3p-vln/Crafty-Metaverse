@@ -67,3 +67,15 @@ accordionMore.forEach(item => {
         }
     })
 })
+
+const members = document.querySelectorAll('.member');
+members.forEach(item => {
+    item.addEventListener('click', () => {
+        if(!item.classList.contains('active')) {
+            item.classList.add('active');
+        }
+        else {
+            item.classList.remove('active');
+        }
+    })
+})
