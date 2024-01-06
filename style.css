@@ -1524,7 +1524,7 @@ button:hover {
     background-repeat: no-repeat;
     background-position: bottom center;
     padding-top: 140px;
-    padding-bottom: 145px;
+    padding-bottom: 115px;
     position: relative;
 }
 
@@ -1668,6 +1668,150 @@ button:hover {
 .member.fourth.active {
     margin-top: 30px;
     margin-bottom: 0;
+}
+
+.faq {
+    padding-top: 205px;
+    position: relative;
+}
+
+.faq__blurs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blurs__first {
+    width: 1088.878px;
+    height: 840px;
+    border-radius: 1088.878px;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(0, 219, 222, 0.30) 0%, rgba(252, 0, 255, 0.30) 100%);
+    filter: blur(218px);
+    position: absolute;
+    left: -400px;
+    top: 120px;
+    z-index: 10;
+}
+
+.blurs__second {
+    width: 1088.878px;
+    height: 840px;
+    border-radius: 1088.878px;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(0, 219, 222, 0.30) 0%, rgba(252, 0, 255, 0.30) 100%);
+    filter: blur(218px);
+    position: absolute;
+    right: -340px;
+    bottom: 6px;
+    z-index: 10;
+}
+
+.faq__border {
+    position: relative;
+    background: linear-gradient(360deg, rgba(58, 78, 255, 0.15) 0%, rgba(156, 58, 255, 0.44) 100%);
+    max-width: 1343px;
+    margin: 0px auto;
+    padding: 4px;
+    clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
+}
+
+.faq__content {
+    position: relative;
+    background: #10051e url(img/Vector-2.svg) 0 0 repeat-y;
+    padding: 92px 37px 95px 83px;
+    clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
+    position: relative;
+}
+
+.faq__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq__info {
+    margin-top: 10px;
+}
+
+.question {
+    font-family: 'HeliosExtC';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 140%;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.question p {
+    padding-right: 70px;
+}
+
+.question::after {
+    position: absolute;
+    bottom: -3px;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    opacity: 0.5;
+}
+
+.question p::after {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 3px;
+    background-color: white;
+    right: 16px;
+    top: 70px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.question p::before {
+    content: '';
+    position: absolute;
+    height: 33px;
+    width: 3px;
+    background-color: white;
+    right: 31px;
+    top: 55px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.faq__question.active .question p::after {
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.faq__question.active .question p::before {
+    right: 20px;
+    top: 65px;
+    transform: rotate(135deg) translate(0, 50%);
+}
+
+.answer {
+    font-family: 'Plus Jakarta Display';
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 160%;
+    opacity: 0.7;
+    display: none;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    letter-spacing: -0.15px;
+}
+
+.faq__question.active .answer {
+    display: block;
 }
 
 /*АДАПТИВЫ*/
@@ -2526,6 +2670,62 @@ button:hover {
 
     .virtual__blur {
         top: 448px;
+    }
+
+    .faq {
+        padding-top: 78px;
+    }
+
+    .faq__border {
+        padding: 2px;
+        clip-path: polygon(10% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 3%);
+    }
+
+    .faq__content {
+        padding: 60px 25px 40px 15px;
+        clip-path: polygon(10% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 3%);
+    }
+
+    .faq__info {
+        margin-top: 30px;
+    }
+
+    .question {
+        font-size: 16px;
+        padding-bottom: 23px;
+        padding-top: 19px;
+    }
+
+    .answer {
+        font-size: 16px;
+        line-height: 160%;
+    }
+
+    .question p {
+        padding-right: 55px;
+    }
+
+    .question p::before {
+        height: 20px;
+        width: 2px;
+        right: 9px;
+        top: 21px;
+    }
+
+    .question p::after {
+        width: 20px;
+        height: 2px;
+        right: 0px;
+        top: 30px;
+    }
+
+    .faq__question.active .question p::before {
+        right: 2px;
+        top: 27px;
+    }
+
+    .faq__title {
+        margin-bottom: 0;
     }
 }
 

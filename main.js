@@ -79,3 +79,15 @@ members.forEach(item => {
         }
     })
 })
+
+const fqa = document.querySelectorAll('.faq__question');
+fqa.forEach(item => {
+    item.addEventListener('click', () => {
+        if(!item.classList.contains('active')) {
+            item.classList.add('active');
+        }
+        else {
+            item.classList.remove('active');
+        }
+    })
+})
