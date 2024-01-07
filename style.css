@@ -1226,7 +1226,7 @@ button:hover {
 
 .game {
     width: 100%;
-    background-image: url(img/game-bg.jpg);
+    background-image:url(img/game-bg.webp), url(img/game-bg.jpg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1519,7 +1519,7 @@ button:hover {
 }
 
 .our-team {
-    background-image: url(img/our-team-bg.png);
+    background-image: url(img/our-team-bg.webp), url(img/our-team-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -2866,7 +2866,7 @@ button:hover {
 
     .our-team {
         padding-top: 89px;
-        background-image: url(img/our-team-bg-adapt.png);
+        background-image: url(img/our-team-bg-adapt.webp), url(img/our-team-bg-adapt.png);
         background-size: cover;
     }
 
