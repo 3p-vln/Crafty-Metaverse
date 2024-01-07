@@ -71,7 +71,7 @@ accordionMore.forEach(item => {
 const members = document.querySelectorAll('.member');
 members.forEach(item => {
     item.addEventListener('click', () => {
-        if(!item.classList.contains('active')) {
+        if (!item.classList.contains('active')) {
             item.classList.add('active');
         }
         else {
@@ -83,11 +83,36 @@ members.forEach(item => {
 const fqa = document.querySelectorAll('.faq__question');
 fqa.forEach(item => {
     item.addEventListener('click', () => {
-        if(!item.classList.contains('active')) {
+        if (!item.classList.contains('active')) {
             item.classList.add('active');
         }
         else {
             item.classList.remove('active');
         }
     })
+})
+
+const swiperSocial = new Swiper('.social__swiper', {
+    slidesPerView: 1.7,
+    breakpoints: {
+        684: {
+            enabled: false,
+        },
+        655: {
+            slidesPerView: 2.9,
+        },
+        600: {
+            slidesPerView: 2.8,
+        },
+        550: {
+            slidesPerView: 2.55,
+        },
+        500: {
+            slidesPerView: 2.3,
+        },
+        450: {
+            slidesPerView: 2.1,
+        },
+        
+    },
 })

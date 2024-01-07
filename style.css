@@ -1693,7 +1693,6 @@ button:hover {
     position: absolute;
     left: -400px;
     top: 120px;
-    z-index: 10;
 }
 
 .blurs__second {
@@ -1706,7 +1705,6 @@ button:hover {
     position: absolute;
     right: -340px;
     bottom: 6px;
-    z-index: 10;
 }
 
 .faq__border {
@@ -1720,7 +1718,7 @@ button:hover {
 
 .faq__content {
     position: relative;
-    background: #10051e url(img/Vector-2.svg) 0 0 repeat-y;
+    background: #10051e7f url(img/Vector-2.svg) 0 0 repeat-y;
     padding: 92px 37px 95px 83px;
     clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
     position: relative;
@@ -1734,6 +1732,11 @@ button:hover {
 
 .faq__info {
     margin-top: 10px;
+}
+
+.faq__question {
+    height: auto;
+    cursor: pointer;
 }
 
 .question {
@@ -1812,6 +1815,90 @@ button:hover {
 
 .faq__question.active .answer {
     display: block;
+}
+
+.social__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.social__swiper .swiper-wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social__swiper .swiper-slide {
+    height: 422px;
+    max-width: 289px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    flex: 0 0 50%;
+}
+
+.social__swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social {
+    margin-top: 50px;
+    padding-top: 150px;
+    padding-bottom: 445px;
+    background-image: url(img/our-team.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.social__blurs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.social__blurs_first {
+    position: absolute;
+    width: 851.178px;
+    height: 704.503px;
+    transform: rotate(-151.293deg);
+    border-radius: 851.178px;
+    opacity: 0.33;
+    background: linear-gradient(96deg, #00DBDE 25.39%, #FC00FF 84.84%);
+    filter: blur(218px);
+    left: -15%;
+    bottom: 45px;
+}
+
+.social__blurs_second {
+    position: absolute;
+    width: 577.485px;
+    height: 625.589px;
+    transform: rotate(-175.957deg);
+    border-radius: 625.589px;
+    opacity: 0.33;
+    background: linear-gradient(96deg, #00DBDE 25.39%, #FC00FF 84.84%);
+    filter: blur(100px);
+    left: 37%;
+    top: 20%;
+}
+
+.social__blurs_third {
+    position: absolute;
+    width: 487.153px;
+    height: 603.71px;
+    border-radius: 603.71px;
+    opacity: 0.45;
+    background: var(--1, linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%));
+    filter: blur(218px);
+    right: 0;
+    top: 20%;
 }
 
 /*АДАПТИВЫ*/
@@ -2171,6 +2258,11 @@ button:hover {
     .virtual__star {
         bottom: 457px;
         right: 100px;
+    }
+
+    .social__swiper .swiper-wrapper {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -2780,6 +2872,54 @@ button:hover {
 
     .our-team__head {
         margin-bottom: 0;
+    }
+
+    .social__swiper .swiper-wrapper {
+        flex-wrap: nowrap;
+        justify-content: start;
+        padding-left: 25px;
+    }
+
+    .social__swiper .swiper-slide {
+        max-height: 265.284px;
+        max-width: 200px;
+        margin-right: 10px;
+    }
+
+    .social {
+        padding-top: 55px;
+    }
+
+    .social__title {
+        margin-bottom: 10px;
+    }
+
+    .social__blurs_third {
+        display: none;
+    }
+
+    .social__blurs_first {
+        width: 380.376px;
+        height: 314.829px;
+        transform: rotate(-151.293deg);
+        border-radius: 380.376px;
+        opacity: 0.33;
+        background: linear-gradient(96deg, #00DBDE 25.39%, #FC00FF 84.84%);
+        filter: blur(97.42022705078125px);
+        left: -33%;
+        bottom: 110px;
+    }
+
+    .social__blurs_second {
+        width: 282.801px;
+        height: 300.513px;
+        flex-shrink: 0;
+        border-radius: 300.513px;
+        opacity: 0.45;
+        background: var(--1, linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%));
+        filter: blur(108.5152587890625px);
+        left: 63%;
+        top: -7%;
     }
 }
 
