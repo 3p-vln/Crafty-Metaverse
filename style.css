@@ -1226,7 +1226,7 @@ button:hover {
 
 .game {
     width: 100%;
-    background-image:url(img/game-bg.webp), url(img/game-bg.jpg);
+    background-image: url(img/game-bg.webp), url(img/game-bg.jpg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1848,7 +1848,7 @@ button:hover {
 .social {
     margin-top: 50px;
     padding-top: 150px;
-    padding-bottom: 445px;
+    padding-bottom: 155px;
     background-image: url(img/our-team.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1899,6 +1899,102 @@ button:hover {
     filter: blur(218px);
     right: 0;
     top: 20%;
+}
+
+.footer {
+    position: relative;
+    font-family: 'Plus Jakarta Display';
+    padding-left: 75px;
+    height: 288px;
+    display: flex;
+}
+
+.footer__blur{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+.footer__blur img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0.7;
+}
+
+.footer__base {
+    padding-top: 80px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    max-width: 575px;
+    width: 100%;
+    position: relative;
+}
+
+.footer__base::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    opacity: 0.7;
+    right: 0;
+    top: 0;
+}
+
+.footer__base img {
+    margin-bottom: 36px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    width: 230px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.footer__contacts::before{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.7;
+    left: 0;
+    top: 50%;
+}
+
+.footer__clean {
+    width: 1040px;
+    position: relative;
+}
+
+.footer__clean::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    opacity: 0.7;
 }
 
 /*АДАПТИВЫ*/
@@ -2822,6 +2918,9 @@ button:hover {
 }
 
 @media (max-width:684px) {
+    .footer{
+        display: none;
+    }
     .member {
         flex-direction: column;
     }
