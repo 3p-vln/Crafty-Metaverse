@@ -33,12 +33,9 @@ const swiperAbout = new Swiper('.about-us__swiper', {
     pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
-        formatFractionCurrent: function (number) {
-            return (number + ' Chapter').slice(-120);
-        },
         renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' +
-                ' ' +
+            return '<span class="' + currentClass + '"> </span>' +
+                ' Chapter' +
                 '<span class="' + totalClass + '"></span>';
         },
     },
