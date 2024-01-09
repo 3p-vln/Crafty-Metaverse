@@ -2881,18 +2881,11 @@ button:hover {
         padding-right: 55px;
     }
 
-    .question p::before {
-        height: 20px;
-        width: 2px;
-        right: 9px;
-        top: 21px;
-    }
-
     .question p::after {
         width: 20px;
-        height: 2px;
-        right: 0px;
-        top: 30px;
+        height: 20px;
+        top: 20px;
+        background-size: cover;
     }
 
     .faq__question.active .question p::before {
