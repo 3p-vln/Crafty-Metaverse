@@ -182,7 +182,7 @@ body {
 
 .subtitle {
     font-family: 'Plus Jakarta Display';
-    font-size: 20px;
+    font-size: calc(16px + (20 - 16) * ((100vw - 768px) / (1670 - 768))) ;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.2px;
@@ -346,12 +346,12 @@ button:hover {
     margin-top: 2px;
 }
 
-.about-us .swiper-pagination-current{
+.about-us .swiper-pagination-current {
     width: 20px;
     text-align: left;
 }
 
-.about-us .swiper-pagination-total{
+.about-us .swiper-pagination-total {
     margin-left: auto;
 }
 
@@ -1149,12 +1149,11 @@ button:hover {
     position: relative;
     left: -60px;
     width: 110%;
-    height: 289px;
     overflow: hidden;
     font-family: 'HeliosExtC';
-    font-size: 200px;
+    font-size: calc(52px + (200 - 52) * ((100vw - 390px) / (1670 - 390))) ;
     font-weight: 700;
-    line-height: 140%;
+    padding: 20px 0;
     letter-spacing: 2px;
     transform: rotate(-9.094deg);
     background: rgba(255, 255, 255, 0.04);
@@ -1184,7 +1183,7 @@ button:hover {
 .tickers__first .tickers__content p {
     white-space: nowrap;
     padding: 0 70px;
-    animation: tickers 10s linear infinite;
+    animation: tickers-1 10s linear infinite;
 }
 
 .tickers__second {
@@ -1194,17 +1193,23 @@ button:hover {
     overflow: hidden;
     transform: rotate(-9.094deg);
     font-family: 'HeliosExtC';
-    font-size: 72px;
+    font-size: calc(19px + (72 - 19) * ((100vw - 390px) / (1670 - 390))) ;
     font-weight: 700;
     line-height: 140%;
     letter-spacing: 0.72px;
     background: #000;
     margin-top: 20px;
-    padding: 11px 0;
+    padding: 5px 0;
+}
+
+.tickers__second .tickers__content p svg {
+    width: calc(20px + (55 - 20) * ((100vw - 390px) / (1670 - 390))) ;
+    height: calc(20px + (56 - 20) * ((100vw - 390px) / (1670 - 390))) ;
 }
 
 .tickers__second.last {
     transform: rotate(6.016deg);
+    font-size: calc(32px + (72 - 32) * ((100vw - 390px) / (1670 - 390))) ;
 }
 
 .tickers__second .tickers__content {
@@ -1217,17 +1222,28 @@ button:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 0 10px;
-    animation: tickers 2s linear infinite;
+    padding-left: calc(5px + (10 - 5) * ((100vw - 390px) / (1670 - 390)));
+    padding-right: calc(5px + (10 - 5) * ((100vw - 390px) / (1670 - 390)));
+    animation: tickers-2 5s linear infinite;
 }
 
-@keyframes tickers {
+@keyframes tickers-1 {
     0% {
-        transform: translateZ(0);
+        transform: translateX(0%);
     }
 
     100% {
-        transform: translate3d(-100%, 0, 0);
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes tickers-2 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
 
@@ -1367,11 +1383,6 @@ button:hover {
     top: 347px;
 }
 
-.explore-and-virtual__content {
-    position: relative;
-    z-index: 5;
-}
-
 .explore {
     display: flex;
     max-height: 803px;
@@ -1447,8 +1458,8 @@ button:hover {
 
 .virtual__img {
     position: absolute;
-    left: -15px;
-    bottom: -147px;
+    left: 0;
+    bottom: 0;
 }
 
 .virtual__content {
@@ -1482,7 +1493,7 @@ button:hover {
 
 .virtual__blur {
     position: absolute;
-    margin-left: 523px;
+    right: 0;
     top: 0;
     min-height: 361px;
     height: 100%;
@@ -1714,21 +1725,37 @@ button:hover {
     bottom: 6px;
 }
 
-.faq__border {
-    position: relative;
-    background: linear-gradient(360deg, rgba(58, 78, 255, 0.15) 0%, rgba(156, 58, 255, 0.44) 100%);
+.fqa__wrapper {
+    clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
     max-width: 1343px;
     margin: 0px auto;
+    overflow: hidden;
+    overflow: hidden;
+    min-height: 1296px;
+    position: relative;
+}
+
+.faq__border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(360deg, rgba(58, 78, 255, 0.15) 0%, rgba(156, 58, 255, 0.44) 100%);
     padding: 4px;
+}
+
+.fqa__container {
+    position: relative;
+    min-height: 1289px;
+    height: 100%;
     clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
 }
 
 .faq__content {
-    position: relative;
-    background: #10051e7f url(img/Vector-2.svg) 0 0 repeat-y;
+    position: absolute;
+    width: 100%;
     padding: 92px 37px 95px 83px;
-    clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
-    position: relative;
+    background: #10051e7f url(img/Vector-2.svg) 0 0 repeat-y;
 }
 
 .faq__head {
@@ -1779,7 +1806,7 @@ button:hover {
     height: 33px;
     background-image: url(img/accord.svg);
     right: 16px;
-    top: 70px;
+    top: 60px;
     border-radius: 50%;
     transition: transform 0.5s ease;
 }
@@ -1898,7 +1925,7 @@ button:hover {
     display: flex;
 }
 
-.footer__blur{
+.footer__blur {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -1906,7 +1933,7 @@ button:hover {
     opacity: 0.7;
 }
 
-.footer__blur img{
+.footer__blur img {
     width: 100%;
     object-fit: cover;
 }
@@ -1932,7 +1959,7 @@ button:hover {
     position: relative;
 }
 
-.footer__base::before{
+.footer__base::before {
     content: '';
     position: absolute;
     width: 1px;
@@ -1959,7 +1986,7 @@ button:hover {
     position: relative;
 }
 
-.footer__contacts::before{
+.footer__contacts::before {
     position: absolute;
     content: '';
     height: 1px;
@@ -2063,6 +2090,7 @@ button:hover {
 
     .virtual__img {
         position: relative;
+        left: -230px;
         bottom: -162px;
     }
 
@@ -2073,7 +2101,7 @@ button:hover {
 
     .virtual__blur {
         margin-left: 0;
-        top: 765px;
+        top: 0;
         max-height: 361px;
         max-width: 100%;
     }
@@ -2202,40 +2230,29 @@ button:hover {
 
     .tickers__first {
         left: -20px;
-        height: 76px;
-        font-size: 52.391px;
         font-weight: 700;
-        line-height: 140%;
         letter-spacing: 0.5px;
     }
 
     .tickers__first .tickers__content p {
         padding: 0 25px;
-        animation: tickers 5s linear infinite;
     }
 
     .tickers__second {
         margin-top: 7px;
-        font-size: 18.861px;
-        line-height: 140%;
     }
 
-    .tickers__second.last {
+    /* .tickers__second.last {
         font-size: 32px;
-    }
+    } */
 
     .our-team {
         padding-bottom: 10px;
     }
 
-    .tickers__second .tickers__content p {
+    /* .tickers__second .tickers__content p {
         padding: 0 5px;
-    }
-
-    .tickers__second .tickers__content p svg {
-        width: 20px;
-        height: 20px;
-    }
+    } */
 
     .virtual__content,
     .explore__content {
@@ -2303,7 +2320,6 @@ button:hover {
     }
 
     .virtual__blur {
-        top: 330px;
         min-height: 390px;
         background: linear-gradient(180deg, rgba(58, 78, 255, 0.00) 0%, rgba(156, 58, 255, 0.14) 100%);
     }
@@ -2351,10 +2367,6 @@ button:hover {
 }
 
 @media (max-width:768px) {
-    .subtitle {
-        font-size: 16px;
-    }
-
     h1 {
         font-size: 26px;
         margin-top: 20px;
@@ -2845,7 +2857,7 @@ button:hover {
     }
 
     .virtual__blur {
-        top: 448px;
+        top: 50px;
     }
 
     .faq {
@@ -2899,9 +2911,10 @@ button:hover {
 }
 
 @media (max-width:684px) {
-    .footer{
+    .footer {
         display: none;
     }
+
     .member {
         flex-direction: column;
     }
