@@ -25,6 +25,12 @@ document.querySelector('.burger').addEventListener('click', function () {
             document.querySelector('.header__menu').classList.remove('open');
         })
     })
+    if(document.querySelector('.header__menu').classList.contains('open')){
+        document.querySelector('body').style = "overflow: hidden";
+    }
+    else{
+        document.querySelector('body').style = "overflow: auto";
+    }
 });
 
 const swiperAbout = new Swiper('.about-us__swiper', {

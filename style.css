@@ -2141,6 +2141,7 @@ button:hover {
         gap: 40px;
         margin-top: 0;
         overflow: auto;
+        height: 100%;
     }
 
     .home {
