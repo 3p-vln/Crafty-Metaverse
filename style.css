@@ -182,7 +182,7 @@ body {
 
 .subtitle {
     font-family: 'Plus Jakarta Display';
-    font-size: calc(16px + (20 - 16) * ((100vw - 768px) / (1670 - 768))) ;
+    font-size: calc(16px + (20 - 16) * ((100vw - 768px) / (1920 - 768)));
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.2px;
@@ -685,8 +685,8 @@ button:hover {
 }
 
 .accordion__more {
-    display: none;
     position: absolute;
+    display: none;
 }
 
 .accordion__more.active {
@@ -755,35 +755,23 @@ button:hover {
 
 .first .card__blur {
     position: absolute;
-    width: 385px;
-    height: 350px;
-    background-color: #06D6DF;
-    mix-blend-mode: hard-light;
-    filter: blur(113.82996368408203px);
-    top: 104px;
-    opacity: 0.5;
+    bottom: 150px;
+    opacity: 0.2;
+    left: -170px;
 }
 
 .second .card__blur {
     position: absolute;
-    width: 385px;
-    height: 350px;
-    background-color: #7B71EE;
-    mix-blend-mode: hard-light;
-    filter: blur(113.82996368408203px);
-    top: 161px;
-    opacity: 0.5;
+    bottom: 50px;
+    left: -280px;
+    opacity: 0.2;
 }
 
 .third .card__blur {
     position: absolute;
-    width: 385px;
-    height: 350px;
-    background-color: #F00AFE;
-    mix-blend-mode: hard-light;
-    filter: blur(113.82996368408203px);
-    top: 104px;
-    opacity: 0.5;
+    bottom: 145px;
+    left: -210px;
+    opacity: 0.2;
 }
 
 .card__img {
@@ -863,23 +851,16 @@ button:hover {
 }
 
 .our-resources {
-    padding-top: 95px;
+    padding-top: 94px;
     padding-bottom: 80px;
     position: relative;
 }
 
 .our-resources__blur {
     position: absolute;
-    left: 51px;
-    top: 273px;
-    width: 1333.034px;
-    height: 588.11px;
-    transform: rotate(1.67deg);
-    flex-shrink: 0;
-    border-radius: 1333.034px;
-    opacity: 0.34;
-    background: var(--1, linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%));
-    filter: blur(218px);
+    left: 0px;
+    top: 0px;
+    transform: rotate(-1.67deg);
 }
 
 .our-resources__head {
@@ -1151,7 +1132,7 @@ button:hover {
     width: 110%;
     overflow: hidden;
     font-family: 'HeliosExtC';
-    font-size: calc(52px + (200 - 52) * ((100vw - 390px) / (1670 - 390))) ;
+    font-size: calc(52px + (200 - 52) * ((100vw - 390px) / (1920 - 390)));
     font-weight: 700;
     padding: 20px 0;
     letter-spacing: 2px;
@@ -1193,7 +1174,7 @@ button:hover {
     overflow: hidden;
     transform: rotate(-9.094deg);
     font-family: 'HeliosExtC';
-    font-size: calc(19px + (72 - 19) * ((100vw - 390px) / (1670 - 390))) ;
+    font-size: calc(19px + (72 - 19) * ((100vw - 390px) / (1920 - 390)));
     font-weight: 700;
     line-height: 140%;
     letter-spacing: 0.72px;
@@ -1203,13 +1184,13 @@ button:hover {
 }
 
 .tickers__second .tickers__content p svg {
-    width: calc(20px + (55 - 20) * ((100vw - 390px) / (1670 - 390))) ;
-    height: calc(20px + (56 - 20) * ((100vw - 390px) / (1670 - 390))) ;
+    width: calc(20px + (55 - 20) * ((100vw - 390px) / (1920 - 390)));
+    height: calc(20px + (56 - 20) * ((100vw - 390px) / (1920 - 390)));
 }
 
 .tickers__second.last {
     transform: rotate(6.016deg);
-    font-size: calc(32px + (72 - 32) * ((100vw - 390px) / (1670 - 390))) ;
+    font-size: calc(32px + (72 - 32) * ((100vw - 390px) / (1920 - 390)));
 }
 
 .tickers__second .tickers__content {
@@ -1222,8 +1203,8 @@ button:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-left: calc(5px + (10 - 5) * ((100vw - 390px) / (1670 - 390)));
-    padding-right: calc(5px + (10 - 5) * ((100vw - 390px) / (1670 - 390)));
+    padding-left: calc(5px + (10 - 5) * ((100vw - 390px) / (1920 - 390)));
+    padding-right: calc(5px + (10 - 5) * ((100vw - 390px) / (1920 - 390)));
     animation: tickers-2 5s linear infinite;
 }
 
@@ -1371,16 +1352,8 @@ button:hover {
 
 .explore-and-virtual__blur {
     position: absolute;
-    width: 859.184px;
-    height: 529.738px;
-    transform: rotate(154.449deg);
-    flex-shrink: 0;
-    border-radius: 859.184px;
-    opacity: 0.25;
-    background: var(--2, linear-gradient(90deg, #21FCFF 0%, #FD40FF 100%));
-    filter: blur(218px);
-    left: 90px;
-    top: 347px;
+    left: 0px;
+    top: 0px;
 }
 
 .explore {
@@ -1542,7 +1515,7 @@ button:hover {
     background-repeat: no-repeat;
     background-position: bottom center;
     padding-top: 140px;
-    padding-bottom: 115px;
+    padding-bottom: 120px;
     position: relative;
 }
 
@@ -1725,36 +1698,22 @@ button:hover {
     bottom: 6px;
 }
 
-.fqa__wrapper {
+.faq__border {
     clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
     max-width: 1343px;
     margin: 0px auto;
-    overflow: hidden;
-    overflow: hidden;
-    min-height: 1296px;
     position: relative;
-}
-
-.faq__border {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
     background: linear-gradient(360deg, rgba(58, 78, 255, 0.15) 0%, rgba(156, 58, 255, 0.44) 100%);
-    padding: 4px;
-}
-
-.fqa__container {
-    position: relative;
-    min-height: 1289px;
-    height: 100%;
-    clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
+    padding: calc(2px + (4 - 2) * ((100vw - 390px)/(1920 - 390)));
 }
 
 .faq__content {
-    position: absolute;
-    width: 100%;
-    padding: 92px 37px 95px 83px;
+    position: relative;
+    clip-path: polygon(5% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 4%);
+    padding-top: calc(60px + (92 - 60) * ((100vw - 390px)/(1920 - 390)));
+    padding-bottom: calc(40px + (95 - 40) * ((100vw - 390px)/(1920 - 390)));
+    padding-left: calc(15px + (83 - 15) * ((100vw - 390px)/(1920 - 390)));
+    padding-right: calc(25px + (37 - 25) * ((100vw - 390px)/(1920 - 390)));
     background: #10051e7f url(img/Vector-2.svg) 0 0 repeat-y;
 }
 
@@ -2242,17 +2201,9 @@ button:hover {
         margin-top: 7px;
     }
 
-    /* .tickers__second.last {
-        font-size: 32px;
-    } */
-
     .our-team {
-        padding-bottom: 10px;
+        padding-bottom: 50px;
     }
-
-    /* .tickers__second .tickers__content p {
-        padding: 0 5px;
-    } */
 
     .virtual__content,
     .explore__content {
@@ -2864,13 +2815,11 @@ button:hover {
         padding-top: 78px;
     }
 
-    .faq__border {
-        padding: 2px;
+    .fqa__wrapper {
         clip-path: polygon(10% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 3%);
     }
 
-    .faq__content {
-        padding: 60px 25px 40px 15px;
+    .faq__container {
         clip-path: polygon(10% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 3%);
     }
 

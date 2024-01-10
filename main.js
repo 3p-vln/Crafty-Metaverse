@@ -25,10 +25,10 @@ document.querySelector('.burger').addEventListener('click', function () {
             document.querySelector('.header__menu').classList.remove('open');
         })
     })
-    if(document.querySelector('.header__menu').classList.contains('open')){
+    if (document.querySelector('.header__menu').classList.contains('open')) {
         document.querySelector('body').style = "overflow: hidden";
     }
-    else{
+    else {
         document.querySelector('body').style = "overflow: auto";
     }
 });
@@ -86,12 +86,10 @@ members.forEach(item => {
 const fqa = document.querySelectorAll('.faq__question');
 fqa.forEach(item => {
     item.addEventListener('click', () => {
-        if (!item.classList.contains('active')) {
-            item.classList.add('active');
-        }
-        else {
-            item.classList.remove('active');
-        }
+        fqa.forEach(a => {
+            a.classList.remove('active')
+        })
+        item.classList.add('active');
     })
 })
 
@@ -116,6 +114,6 @@ const swiperSocial = new Swiper('.social__swiper', {
         450: {
             slidesPerView: 2.1,
         },
-        
+
     },
 })
