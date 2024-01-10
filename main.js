@@ -94,26 +94,26 @@ fqa.forEach(item => {
 })
 
 const swiperSocial = new Swiper('.social__swiper', {
-    slidesPerView: 1.7,
+    slidesPerView: 'auto',
     breakpoints: {
         684: {
             enabled: false,
         },
-        655: {
-            slidesPerView: 2.9,
-        },
-        600: {
-            slidesPerView: 2.8,
-        },
-        550: {
-            slidesPerView: 2.55,
-        },
-        500: {
-            slidesPerView: 2.3,
-        },
-        450: {
-            slidesPerView: 2.1,
-        },
+        // 655: {
+        //     slidesPerView: 2.9,
+        // },
+        // 600: {
+        //     slidesPerView: 2.8,
+        // },
+        // 550: {
+        //     slidesPerView: 2.55,
+        // },
+        // 500: {
+        //     slidesPerView: 2.3,
+        // },
+        // 450: {
+        //     slidesPerView: 2.1,
+        // },
 
     },
 })

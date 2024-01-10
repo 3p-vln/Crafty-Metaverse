@@ -2579,7 +2579,8 @@ button:hover {
 
     .our-resources__star {
         bottom: 105px;
-        left: 314px;
+        left: auto;
+        right: 30px;
     }
 
     .info__logo {
