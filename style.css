@@ -19,6 +19,11 @@ body {
 }
 
 @font-face {
+    font-family: 'HeliosBlackC_Regular';
+    src: url('fonts/HeliosBlackC_Regular.woff2') format("woff2");
+}
+
+@font-face {
     font-family: 'HeliosBlackC';
     src: url('fonts/HeliosBlackC.woff2') format("woff2");
 }
@@ -223,7 +228,7 @@ button {
     border-radius: 6px;
     background: linear-gradient(99deg, #7A42F4 0%, #4642F4 100%), #FFF;
     color: #FFF;
-    font-family: 'HeliosBlackC';
+    font-family: 'HeliosBlackC_Regular';
     font-size: 18px;
     font-weight: 900;
     line-height: 145%;
@@ -686,11 +691,16 @@ button:hover {
 
 .accordion__more {
     position: absolute;
-    display: none;
+    min-height: 0;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
 }
 
 .accordion__more.active {
-    display: block;
+    min-height: 124px;
+    height: 100%;
+    opacity: 1;
 }
 
 @keyframes pulsing {
@@ -710,6 +720,7 @@ button:hover {
 .our-brands {
     background: linear-gradient(180deg, rgba(36, 10, 92, 0.63) 8.97%, rgba(36, 11, 88, 0.30) 100%);
     backdrop-filter: blur(150px);
+    -webkit-backdrop-filter: blur(150px);
     padding-top: 115px;
     padding-bottom: 130px;
 }
@@ -764,7 +775,7 @@ button:hover {
     position: absolute;
     bottom: 50px;
     left: -280px;
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .third .card__blur {
@@ -858,6 +869,7 @@ button:hover {
 
 .our-resources__blur {
     position: absolute;
+    width: 100%;
     left: 0px;
     top: 0px;
     transform: rotate(-1.67deg);
@@ -1139,6 +1151,7 @@ button:hover {
     transform: rotate(-9.094deg);
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
